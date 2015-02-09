@@ -1,0 +1,82 @@
+TBLASTN 2.2.28+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: AndrocSS3.Trinity.fasta
+           158,114 sequences; 68,505,937 total letters
+
+
+
+Query= Cscu_3c
+
+Length=633
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  comp3192_c2_seq1 len=1448 path=[595:0-1447]                          820    0.0   
+  comp5377_c0_seq1 len=2030 path=[1:0-2029]                            719    0.0   
+  comp7491_c0_seq1 len=4295 path=[1:0-4294]                            682    0.0   
+  comp8791_c0_seq1 len=1559 path=[1:0-1558]                            567    0.0   
+  comp9473_c0_seq1 len=1668 path=[1:0-1667]                            542    0.0   
+  comp7798_c0_seq1 len=1724 path=[1:0-1723]                            542    0.0   
+  comp8982_c0_seq1 len=1601 path=[1:0-1600]                            488    2e-165
+  comp6181_c0_seq1 len=1398 path=[24:0-1397]                           465    3e-157
+  comp17512_c0_seq1 len=602 path=[1:0-601]                             338    1e-111
+  comp7848_c0_seq1 len=477 path=[1:0-476]                              219    8e-67 
+  comp10613_c0_seq1 len=685 path=[1:0-684]                             190    3e-55 
+  comp6081_c0_seq1 len=693 path=[1:0-692]                              179    4e-51 
+  comp19029_c0_seq1 len=688 path=[1:0-687]                             166    1e-46 
+  comp2254_c0_seq1 len=516 path=[3:0-515]                              155    2e-43 
+  comp934546_c0_seq1 len=256 path=[1:0-255]                            116    4e-30 
+  comp2136_c0_seq1 len=1287 path=[1:0-1169 1171:1170-1286]            53.5    4e-07 
+  comp18184_c0_seq1 len=338 path=[1:0-337]                            35.0    0.055 
+  comp751033_c0_seq1 len=222 path=[1:0-221]                           30.8    1.1   
+  comp270582_c0_seq1 len=297 path=[1:0-296]                           30.4    1.7   
+  comp170793_c0_seq1 len=229 path=[1:0-228]                           29.6    2.3   
+  comp247686_c0_seq1 len=550 path=[1:0-549]                           29.6    9.0   
+
+
+> comp3192_c2_seq1 len=1448 path=[595:0-1447]
+Length=1448
+
+ Score =  820 bits (2117),  Expect = 0.0, Method: Compositional matrix adjust.
+ Identities = 382/430 (89%), Positives = 412/430 (96%), Gaps = 1/430 (0%)
+ Frame = -2
+
+Query  205   YYMHQQMCARYDCERLSNDLPKMIPFHNFHEALDGYSPRLTSIINGLPYASRPAGLKLQD  264
+             YYMHQQMCARYDCERLSNDLPKMIPFHNFHEALDGYSPRLTSIINGLPYASRPAGL+LQD
+Sbjct  1447  YYMHQQMCARYDCERLSNDLPKMIPFHNFHEALDGYSPRLTSIINGLPYASRPAGLRLQD  1268
+
+Query  265   MKEVSVQDLERWRDRILAGIHRGYVTADEGREIALTETFGIDILGSLVEASVDSVNKEFY  324
+             MKEVSVQDLERWRDRIL+GIHRGYVTADEGREI LTETFGIDILGSL+EASV+SVN++FY
+Sbjct  1267  MKEVSVQDLERWRDRILSGIHRGYVTADEGREIELTETFGIDILGSLIEASVNSVNRDFY  1088
+
+Query  325   GSLHNWGHVMMAAIQDPTGKYITNPGVMSDTATSLRDPIFYRWHRFIDNIFQEYKNKLPP  384
+             GSLHNWGHVMMAAIQDP GKYITNPGVMSDTATSLRDPIFYRWHRFIDNIFQ+YKN+LPP
+Sbjct  1087  GSLHNWGHVMMAAIQDPKGKYITNPGVMSDTATSLRDPIFYRWHRFIDNIFQQYKNRLPP  908
+
+Query  385   YNKYQLGFTGMEVRNVTLATKHTDPHKVHTTFVSGLLDITNSLPLGTNAVVKIRWPHLTH  444
+             YNK QLGFTGMEVRNVTLAT+H DPH VHTTF +GLLDITNSLPLGTNAVVK++WPHLTH
+Sbjct  907   YNKSQLGFTGMEVRNVTLATEHIDPHVVHTTFTTGLLDITNSLPLGTNAVVKVKWPHLTH  728
+
+Query  445   EEFSYKIHVVNQSARVRPSTVRIFLAPVYDELGNEITINNLRSLMIELDKFNYDVQPGSN  504
+             E+F YKIHVVNQSARVRPSTVRIFLAPVYDELGNEI+IN++RSLMIELDKF+YDV PGSN
+Sbjct  727   EKFEYKIHVVNQSARVRPSTVRIFLAPVYDELGNEISINDIRSLMIELDKFHYDVNPGSN  548
+
+Query  505   LIVRKAEDSSVTLSNESTFSELLKGKGHS-SASEYCSCGWPQHLLLPKGNSRGMDFHLFV  563
+             LI+R A+DSSVT+S E TFS+LLKG G + ++SEYCSCGWPQHLLLPKGN+RGM FHLFV
+Sbjct  547   LIIRNAKDSSVTISKEPTFSDLLKGHGITENSSEYCSCGWPQHLLLPKGNTRGMKFHLFV  368
+
+Query  564   MLTDWLDDAIGETGQTGLCVDAVSYCGAKDQLYPDRRAMGFPFDRRIEANSFSEWLLPNM  623
+             MLTDWLDD IGETG++GLC+DAVSYCGAKDQLYPDRRAMGFPFDRRIEANSF +WLLPNM
+Sbjct  367   MLTDWLDDVIGETGKSGLCLDAVSYCGAKDQLYPDRRAMGFPFDRRIEANSFEDWLLPNM  188
+
+Query  624   SDTIVTIVHD  633
+             SDTI+ IVHD
+Sbjct  187   SDTIIKIVHD  158
