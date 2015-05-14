@@ -28,7 +28,7 @@ args = vars(parser.parse_args())
 if args['file']:
 	with open(args['file'], 'rU') as indata:
 		spamreader   = csv.reader(indata, delimiter='\t', quotechar='#') #Opens the file
-		
+		spam_to_list = list(spamreader)[2:]
 		first_col    = [] # protein 1 / ID
 		second_col   = [] # protein 2
 		third_col    = [] # gene name data
