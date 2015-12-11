@@ -9,7 +9,6 @@ from itertools import izip
 
 
 # this method checks to see what column the reference data is
-# the method also assumes that your looking at a file that isn't 1:1 orthology
 def check_filtered_file(filtered_data_file):
   print('Checking to see which column the reference data is in')
   with open(filtered_data_file) as filtered_data:
@@ -74,7 +73,8 @@ def retrieve_filtered_file_data(filtered_data_file):
 def retrieve_pairwise_files():
   print('Retrieving pairwise file names')
   f = listdir(getcwd())
-  f = [i for i in f if str(i).endswith('txt') and i != 'filtered_data.txt' and i != 'out.txt' and i != 'all_data.txt' and i != 'out_verbose.txt']
+  # if ever a file is missing from this list check the .find() methods, perhaps a file name contains the sub words out of data
+  f = [i for i in f if str(i).endswith('txt') and i.find('data') == -1 and i.find('out') == -1]
   print('Pairwise file names retrieved')
   return f
 
