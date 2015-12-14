@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+__author__ = 'marcsantiago'
 import re
 import os
 import argparse
