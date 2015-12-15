@@ -23,9 +23,10 @@ if args['file']:
   with open(args['file'], 'r') as indata:
     for line in indata.readlines():
       if line.startswith('>'):
-        m = re.search(r'>[^ ]+(.*)', line)
+        m = re.search(r'>[^ | \n]+(.*)', line)
         if m:
-          terminal_name = re.sub(m.group(1), '', line)
+          #terminal_name = re.sub(m.group(1), '', line)
+          terminal_name = line.replace(m.group(1), '')
         else:
           terminal_name = line
         new_file.append(terminal_name)
@@ -47,9 +48,10 @@ if args['directory']:
     with open(file, 'r') as indata:
       for line in indata.readlines():
         if line.startswith('>'):
-          m = re.search(r'>[^ ]+(.*)', line)
+          m = re.search(r'>[^ | \n]+(.*)', line)
           if m:
-            terminal_name = re.sub(m.group(1), '', line)
+            #terminal_name = re.sub(m.group(1), '', line)
+            terminal_name = line.replace(m.group(1), '')
           else:
             terminal_name = line
           new_file.append(terminal_name)
