@@ -65,7 +65,7 @@ if args['file']:
     genemap = zip(third_col, forth_col)
     genemap = dict(izip(first_col, genemap))
     with open('filtered_data.txt', 'w') as filtered_data:
-      for k, v in genemap.items():
+      for k, v in genemap.iteritems():
         for j in xrange(len(mapped_data)):
           if k == mapped_data[j][0]:
             num = "{0}:{1}".format(mapped_data[j][1], mapped_data[j][2])
@@ -77,7 +77,7 @@ if args['file']:
     genemap = zip(third_col, forth_col)
     genemap = dict(izip(first_col, genemap))
     with open('all_data.txt', 'w') as filtered_data:
-      for k, v in genemap.items():
+      for k, v in genemap.iteritems():
         for j in xrange(len(mapped_data)):
           if k == mapped_data[j][0]:
             num = "{0}:{1}".format(mapped_data[j][1], mapped_data[j][2])
