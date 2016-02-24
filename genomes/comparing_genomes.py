@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-__author__ = 'marcsantiago'
+__author__ = 'marc santiago'
 
 import csv
 import argparse
@@ -41,7 +41,6 @@ if args['file']:
       third_col.append(row[2])
       forth_col.append(row[3])
 
-  
   if len(first_col) != len(second_col):
     raise IndexError("Column 1 and Column 2 weren't the same length, please check the file.")
 
@@ -72,7 +71,7 @@ if args['file']:
             if key == num:
               filtered_data.write("{0}\t{1}\t{2}".format(mapped_data[j][0],
               multiple_replace(str(v), ["(", ""], [")", ""], ["'", ""], [", ", "\t"]), num + "\n"))
-  
+
   if args['all']:
     genemap = zip(third_col, forth_col)
     genemap = dict(izip(first_col, genemap))

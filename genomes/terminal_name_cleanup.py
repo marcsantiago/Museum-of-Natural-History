@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-__author__ = 'marcsantiago'
+__author__ = 'marc santiago'
 import re
 import os
 import argparse
@@ -42,7 +42,7 @@ if args['directory']:
   for files in os.listdir(args['directory']):
     path = args['directory'] + "/" + files
     file_paths.append(path)
-  
+
   for file in file_paths:
     new_file = []
     with open(file, 'r') as indata:
