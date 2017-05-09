@@ -2,6 +2,8 @@ package main
 
 import (
 	"bufio"
+	"bytes"
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -12,9 +14,6 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"flag"
-
-	"bytes"
 )
 
 var (
@@ -22,7 +21,7 @@ var (
 	queryID    = regexp.MustCompile(`Query=\s+([^\s].+)`)
 	CompInfo   = regexp.MustCompile(`(comp[^\s]+)\s*len=(\d*).+(\d[e.][^\n]+)`)
 	contigData = make(map[string]string)
-	compliment = map[string]string{"A":"T","T":"A","G":"C","C":"G"}
+	compliment = map[string]string{"A": "T", "T": "A", "G": "C", "C": "G"}
 )
 
 type blast struct {
@@ -167,7 +166,6 @@ func loadContigData(file, taxa string, mtx *sync.Mutex, wg *sync.WaitGroup) {
 	}
 }
 
-
 //  inSlice checks to see if an item is already present in a slice
 func inSlice(target blast, query []blast) bool {
 	for _, q := range query {
@@ -250,7 +248,7 @@ func splitSubN(s string, n int) []string {
 	l := len(runes)
 	for i, r := range runes {
 		sub = sub + string(r)
-		if (i + 1) % n == 0 {
+		if (i+1)%n == 0 {
 			subs = append(subs, sub)
 			sub = ""
 		} else if (i + 1) == l {
@@ -267,7 +265,6 @@ func main() {
 	contigFolder := flag.String("contigs", "/Users/marcsantiago/Desktop/exon/contigs", "Path to the contigs folders")
 	outputFolder := flag.String("unique", "output", "Create an output folder in the working directory")
 	flag.Parse()
-
 
 	files := getFileNames(*blastFolder)
 	rawData := make(chan []blast)
@@ -324,7 +321,7 @@ func main() {
 		if s, ok := contigData[d.TaxaName+"_"+d.CompID]; ok {
 			sequence = s
 		}
-		if d.Reverse{
+		if d.Reverse {
 			// complement dna
 			var tmp string
 			for _, seq := range sequence {
@@ -341,7 +338,7 @@ func main() {
 		}
 		buf.WriteString(fmt.Sprintf(">%s\n", d.TaxaName))
 		buf.WriteString(sequence)
-		
+
 		// get the future value, one step ahead
 		j := i + 1
 		if j < len(data) {
